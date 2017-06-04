@@ -9,9 +9,10 @@ export default class Layout extends React.Component{
   constructor(){
     super();
     this.state = {name:"james"};
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  changeTitle(){
+  handleClick(){
     console.log("clicked");
     this.setState({name:"cindy"});
   }
@@ -19,7 +20,7 @@ export default class Layout extends React.Component{
   render(){
     return(
       <div>
-        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.name}/>
+        <Header onClick={this.handleClick} title={this.state.name}/>
         <Footer/>
       </div>
     );
