@@ -4,7 +4,7 @@
   "description": "a example of React working with Spring backend",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack -p && webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
     "react-dom": "^15.5.4",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "es6-promise": "^4.1.0",
+    "isomorphic-fetch": "^2.2.1"
   }
 }

@@ -1,7 +1,8 @@
 module.exports = {
+  devtool: 'eval-source-map',//配置生成Source Maps，选择合适的选项
   entry: __dirname+"/src/main/js/app.js",
   output:{
-    path: __dirname+"/src/main/resources/templates/",
+    path: __dirname+"/src/main/resources/static",
     filename: "bundle.js"
   },
   module: {//在配置文件里添加JSON loader
@@ -22,7 +23,7 @@ module.exports = {
   },
 
     devServer: {
-      contentBase: "./src/main/resources/templates",//本地服务器所加载的页面所在的目录
+      contentBase: "./src/main/resources",//本地服务器所加载的页面所在的目录
       historyApiFallback: true,
       inline: true,//实时刷新
       port: 8081
